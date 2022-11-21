@@ -7,39 +7,29 @@ body {
     background-color: #ECEEF0;
     height: 100%;
 }
+
 .wrapper {
-    /* Layout Properties */
-    // position: relative;
-    
-    /* UI Properties */
     background: #ECEEF0 0% 0% no-repeat padding-box;
     opacity: 1;
-    /* display: grid; */
     overflow-x: hidden;
     align-self: center;
     margin: auto;
-    // margin-top: 100px;
 }
 
-.wrapper::-webkit-scrollbar { /* Hides scrollbar */
+.wrapper::-webkit-scrollbar {
     display: none;
-  }
+}
 
 
-.navBar { // DESKTOP SITE
-    /* Layout Properties */
+.navBar {
     overflow: hidden;
-    // width: 100%;
     height: 60px;
-    /* UI Properties */
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 1px 3px #00000012;
-    /* border: 1px solid #0000000D; */
     opacity: 1;
     margin: auto;
     display: grid;
     grid-template-columns: auto auto auto;
-    // justify-content: space-between;
 }
 
 .logo {
@@ -54,14 +44,15 @@ body {
     grid-column-end: 3;
 }
 
-.previous-image, .next-image{
+.previous-image,
+.next-image {
     width: 50px;
     background-color: #FFFFFF;
     justify-self: center;
     align-self: flex-end;
 }
 
-.next-image{
+.next-image {
     justify-content: end;
     grid-column: 4 / 3;
     grid-row: 2/3;
@@ -74,7 +65,7 @@ body {
 }
 
 
-.selected-image-style{
+.selected-image-style {
     display: grid;
     background-color: #FFFFFF;
     margin-top: 10px;
@@ -84,7 +75,7 @@ body {
     margin-bottom: 15px;
 }
 
-.update{
+.update {
     margin: auto;
     margin-right: 36px;
 }
@@ -97,7 +88,7 @@ body {
 .image-grid1 {
     display: grid;
     // grid-template-columns: repeat(2,1fr); /*We have 2 columns and every column is 1fr*/ // MOBIL SITE
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 10px 10px;
     align-items: center;
     height: 100%;
@@ -106,7 +97,7 @@ body {
 
 
 
-.image-grid-img{
+.image-grid-img {
     background-color: white;
     margin: 10px auto;
     align-self: center;
@@ -119,7 +110,8 @@ body {
 .hiddenOverflow {
     overflow: hidden;
 }
-.closeButton{
+
+.closeButton {
     visibility: hidden;
 }
 
@@ -127,7 +119,7 @@ body {
     display: none;
 }
 
-.positioning{
+.positioning {
     position: relative;
     justify-content: center;
     padding: 15px;
@@ -138,39 +130,31 @@ body {
     visibility: unset;
     border-radius: 50%;
     background-color: #A7ABAF;
-  border: none;
-  color: white;
-  padding: 20px;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  font-weight: 600;
-  align-self: center;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
+    border: none;
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: 600;
+    align-self: center;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
 }
 
-// .img-clicked{
-//     border: 10px red solid;
-//     transition: 1s;
-//     background-color: white;
-//     position: absolute;
-//     top: 50%;
-//     width: 100%;
-// }
 
 .loading {
     display: none;
 }
 
-.loading.active{
+.loading.active {
     display: block;
     position: fixed;
     top: 50%;
     left: 50%;
     margin: auto;
-    transform: translate(-50%, -50%) // moves the object to the middle
+    transform: translate(-50%, -50%)
 }
 
 .loading.active img {
@@ -178,43 +162,42 @@ body {
 }
 
 @keyframes spin {
-    100% {transform: rotate(360deg);}
-  }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 @media (max-width: 1000px) {
 
-.image-grid1 {
-    
-    grid-template-columns: repeat(3,1fr); /*We have 2 columns and every column is 1fr*/ 
+    .image-grid1 {
 
-}
+        grid-template-columns: repeat(3, 1fr);
+
+    }
 }
 
 @media (max-width: 520px) {
-    .navBar { 
-        /* Layout Properties */
+    .navBar {
         position: sticky;
         top: 0px;
         left: 0px;
         overflow: hidden;
-        // width: 350px;
         height: 60px;
-        /* UI Properties */
         background: #FFFFFF 0% 0% no-repeat padding-box;
         box-shadow: 0px 1px 3px #00000012;
-        /* border: 1px solid #0000000D; */
         opacity: 1;
         margin: auto;
         display: grid;
         grid-template-columns: auto auto auto;
     }
+
     .image-grid1 {
         align-self: center;
         margin: auto;
-        grid-template-columns: repeat(2,1fr); /*We have 2 columns and every column is 1fr*/ 
-    
+        grid-template-columns: repeat(2, 1fr);
     }
-    .image-grid1-img{
+
+    .image-grid1-img {
         margin: auto;
     }
 }

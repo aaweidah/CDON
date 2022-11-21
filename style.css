@@ -9,28 +9,22 @@ body {
 }
 
 .wrapper {
-  /* Layout Properties */
-  /* UI Properties */
   background: #ECEEF0 0% 0% no-repeat padding-box;
   opacity: 1;
-  /* display: grid; */
   overflow-x: hidden;
   align-self: center;
   margin: auto;
 }
 
-.wrapper::-webkit-scrollbar { /* Hides scrollbar */
+.wrapper::-webkit-scrollbar { 
   display: none;
 }
 
 .navBar {
-  /* Layout Properties */
   overflow: hidden;
   height: 60px;
-  /* UI Properties */
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.0705882353);
-  /* border: 1px solid #0000000D; */
   opacity: 1;
   margin: auto;
   display: grid;
@@ -169,16 +163,13 @@ body {
 }
 @media (max-width: 520px) {
   .navBar {
-    /* Layout Properties */
     position: sticky;
     top: 0px;
     left: 0px;
     overflow: hidden;
     height: 60px;
-    /* UI Properties */
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.0705882353);
-    /* border: 1px solid #0000000D; */
     opacity: 1;
     margin: auto;
     display: grid;
@@ -187,11 +178,10 @@ body {
   .image-grid1 {
     align-self: center;
     margin: auto;
-    grid-template-columns: repeat(2, 1fr); /*We have 2 columns and every column is 1fr*/
+    grid-template-columns: repeat(2, 1fr); 
   }
   .image-grid1-img {
     margin: auto;
   }
 }
 
-/*# sourceMappingURL=style.css.map */

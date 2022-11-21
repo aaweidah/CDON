@@ -1,11 +1,9 @@
 const imageGrid = document.querySelector(".image-grid1")
-//const selectedImageContainer = document.querySelector(".selected-image-container");
 const loading = document.querySelector(".loading")
 const closeButton = document.querySelector(".closeButton")
 let fetchingImages = false
 let images = null
 
-//const update = document.querySelector(".update2").addEventListener("click", renderImages)
 var throttleTime
 const throttle = (callBack, time) => {
     if (throttleTime) {
@@ -17,8 +15,6 @@ const throttle = (callBack, time) => {
         throttleTime = false
     }, time);
 }
-
-// const request = fetch("api.giphy.com/v1/stickers/trending?api_key=P3wOVHP4KNx4VH6JMJs3Bs0KFxv39pqI");
 
 function fetchImages() {
     fetchingImages = true
@@ -39,7 +35,6 @@ function handleInfiniteScroll() {
     if (!isSelectedImage){
         throttle(() => {
             var endOfPage = window.innerHeight + window.pageYOffset >= document.body.offsetHeight
-            // const container = document.querySelector(".image-grid1")
             if (endOfPage) {
                 renderImages()
             }
@@ -51,13 +46,10 @@ function handleInfiniteScroll() {
                 console.log("test")
             }
         }, 1000)
-    }
-        
+    }     
 }
 
 window.addEventListener("scroll", handleInfiniteScroll)
-
-
 
 closeButton.addEventListener("click", (e) => {
     e.target.classList.remove("active")
@@ -79,7 +71,6 @@ async function renderImages() {
             if (!fetchingImages) {
                 const images = document.querySelectorAll(".image-grid1 img")
             e.target.classList.remove("image-grid-img")
-            // e.target.classList.add("selected-image-container")
             images.forEach(img =>{
                 img.className = ""
                 img.classList.add("image-grid-img")
@@ -99,12 +90,8 @@ async function renderImages() {
                     e.target.nextElementSibling.classList.add("next-image")
                     e.target.nextElementSibling.classList.remove("image-grid-img")
                 }
-
             })
             }
-            
-            //setSelectedImageIndex(index)
-            
         })
         imageGrid.appendChild(imageElement)
     })
